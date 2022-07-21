@@ -77,7 +77,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     # TODO Explore using Home Manager for `joe` user packages.
     packages = with pkgs; [
-      firefox
+      firefox-wayland
       google-chrome
       thunderbird
     ];
