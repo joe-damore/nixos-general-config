@@ -6,7 +6,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/release-22.05";
   };
 
-  output = { self, nixpkgs }: {
+  outputs = { self, nixpkgs }: {
     nixosConfigurations.pc-cosmo = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
