@@ -50,6 +50,7 @@
   services.xserver.xkbVariant = "";
   environment.gnome.excludePackages = [
     pkgs.epiphany
+    pkgs.gnome-console
   ];
 
   # System packages.
@@ -63,6 +64,9 @@
 
     # Performance profiling, monitoring, etc.
     glxinfo
+
+    # Desktop applications.
+    gnome.gnome-terminal
   ];
 
   # SSH.
