@@ -84,9 +84,19 @@
     extraGroups = [ "networkmanager" "wheel" ];
     # TODO Explore using Home Manager for `joe` user packages.
     packages = with pkgs; [
+      # General usage.
       firefox-wayland
       google-chrome
       thunderbird
+
+      # Gaming and emulation.
+      mupen64plus        # Nintendo 64 emulation
+      melonDS            # Nintendo DS emulation
+      dolphin-emu-beta   # Nintendo GameCube/Wii emulation
+      yuzu-mainline      # Nintendo Switch emulation
+      duckstation        # PlayStation 1 emulation
+      pcsx2              # PlayStation 2 emulation
+
     ];
   };
 }
