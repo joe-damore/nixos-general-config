@@ -11,7 +11,7 @@
   i18n.defaultLocale = "en_US.utf8";
 
   # Networking.
-  networking.hostname = "pc-cosmo";
+  networking.hostName = "pc-cosmo";
 
   # Stateful Migrations.
   #
