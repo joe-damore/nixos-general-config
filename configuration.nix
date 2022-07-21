@@ -48,6 +48,9 @@
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.layout = "us";
   services.xserver.xkbVariant = "";
+  environment.gnome.excludedPackages = [
+    pkgs.epiphany
+  ];
 
   # System packages.
   environment.systemPackages = with pkgs; [
