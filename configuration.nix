@@ -67,6 +67,9 @@
 
     # Desktop applications.
     gnome.gnome-terminal
+
+    # Multimedia.
+    gimp
   ];
 
   # SSH.
@@ -97,6 +100,10 @@
       duckstation        # PlayStation 1 emulation
       pcsx2              # PlayStation 2 emulation
 
+      # Dev tools.
+      sublime4
+      sublime-merge
+      gh
     ];
   };
 }
