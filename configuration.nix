@@ -99,7 +99,10 @@
     packages = with pkgs; [
       # General usage.
       (pkgs.firefox.overrideAttrs (oldAttrs: {
-        desktopItem.desktopName = "Firefox";
+        # desktopItem.desktopName = "Firefox";
+        desktopItem = (oldAttrs.desktopItem // {
+          desktopName = "Firefox";
+        });
       }))
       firefox-wayland
       google-chrome
