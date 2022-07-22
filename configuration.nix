@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, nixpkgs, ... }:
 
 {
   imports = [
@@ -96,12 +96,12 @@
     description = "Joe D'Amore";
     extraGroups = [ "networkmanager" "wheel" ];
     # TODO Explore using Home Manager for `joe` user packages.
-    packages = with pkgs; [
+    packages = with nixpkgs; [
       # General usage.
       (pkgs.firefox-wayland.overrideAttrs (oldAttrs: rec {
-        desktopItem = (oldAttrs.desktopItem.override {
+        desktopItem = oldAttrs.desktopItem.override {
           desktopName = "Firefox";
-        });
+        };
         postInstall = builtins.replaceStrings [ "${oldAttrs.desktopItem}" ] [ "${desktopItem}" ] oldAttrs.postInstall;
       }))
       google-chrome
