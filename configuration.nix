@@ -49,14 +49,14 @@
   services.xserver.layout = "us";
   services.xserver.xkbVariant = "";
   environment.gnome.excludePackages = [
-    pkgs.epiphany
-    pkgs.gnome-console
-    pkgs.gnome-user-docs
-    pkgs.gnome-tour
+    nixpkgs.epiphany
+    nixpkgs.gnome-console
+    nixpkgs.gnome-user-docs
+    nixpkgs.gnome-tour
   ];
 
   # System packages.
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with nixpkgs; [
     # Low level system administration utilities.
     vim
     nano
