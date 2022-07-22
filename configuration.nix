@@ -98,13 +98,11 @@
     # TODO Explore using Home Manager for `joe` user packages.
     packages = with pkgs; [
       # General usage.
-      (pkgs.firefox.overrideAttrs (oldAttrs: {
-        # desktopItem.desktopName = "Firefox";
+      (pkgs.firefox-wayland.overrideAttrs (oldAttrs: {
         desktopItem = (oldAttrs.desktopItem // {
           desktopName = "Firefox";
         });
       }))
-      firefox-wayland
       google-chrome
       thunderbird
 
