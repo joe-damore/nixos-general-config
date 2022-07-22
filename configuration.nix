@@ -1,4 +1,4 @@
-{ config, nixpkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -49,14 +49,14 @@
   services.xserver.layout = "us";
   services.xserver.xkbVariant = "";
   environment.gnome.excludePackages = [
-    nixpkgs.epiphany
-    nixpkgs.gnome-console
-    nixpkgs.gnome-user-docs
-    nixpkgs.gnome-tour
+    pkgs.epiphany
+    pkgs.gnome-console
+    pkgs.gnome-user-docs
+    pkgs.gnome-tour
   ];
 
   # System packages.
-  environment.systemPackages = with nixpkgs; [
+  environment.systemPackages = with pkgs; [
     # Low level system administration utilities.
     vim
     nano
@@ -96,7 +96,7 @@
     description = "Joe D'Amore";
     extraGroups = [ "networkmanager" "wheel" ];
     # TODO Explore using Home Manager for `joe` user packages.
-    packages = with nixpkgs; [
+    packages = with pkgs; [
       # General usage.
       firefox-wayland
       google-chrome
