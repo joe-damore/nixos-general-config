@@ -51,6 +51,8 @@
   environment.gnome.excludePackages = [
     pkgs.epiphany
     pkgs.gnome-console
+    pkgs.gnome-user-docs
+    pkgs.gnome-tour
   ];
 
   # System packages.
@@ -61,6 +63,14 @@
     wget
     curl
     git
+
+    # Development
+    rustup
+    cargo
+    rustc
+    nodejs-16_x
+    yarn
+    python310
 
     # Performance profiling, monitoring, etc.
     glxinfo
