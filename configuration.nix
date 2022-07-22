@@ -98,12 +98,7 @@
     # TODO Explore using Home Manager for `joe` user packages.
     packages = with nixpkgs; [
       # General usage.
-      (pkgs.firefox-wayland.overrideAttrs (oldAttrs: rec {
-        desktopItem = oldAttrs.desktopItem.override {
-          desktopName = "Firefox";
-        };
-        postInstall = builtins.replaceStrings [ "${oldAttrs.desktopItem}" ] [ "${desktopItem}" ] oldAttrs.postInstall;
-      }))
+      firefox-wayland
       google-chrome
       thunderbird
 
