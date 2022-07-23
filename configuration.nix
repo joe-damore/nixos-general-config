@@ -82,6 +82,10 @@
     gimp
   ];
 
+  # ZSH.
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+
   # SSH.
   services.openssh.enable = true;
 
